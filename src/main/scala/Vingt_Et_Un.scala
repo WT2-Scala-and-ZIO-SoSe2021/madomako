@@ -32,6 +32,35 @@ object Vingt_Et_Un {
 
   }
 
+  def determineHandValue(strategy: Array[Int] => Int)(hand: Array[Int]): Int = {
+    Arrays.sum(hand.map(values).map(strategy))
+  }
+
+  def isBust(handValue: Int): Boolean = {
+    if (handValue == 21){
+      true
+    }else{
+      false
+    }
+  }
+
+  def optimisticF(hand: Array[Int]): Int = {
+    determineHandValue(Arrays.max)(hand)
+  }
+
+  def pessimisticF(hand: Array[Int]): Int = {
+    determineHandValue(Arrays.min)(hand)
+  }
+
+  def determineBestHandValue(hand: Array[Int]): Int = {
+    val optimisticValue = optimisticF(hand)
+    if (isBust(optimisticValue)) {
+      pessimisticF(hand)
+    } else {
+      optimisticValue
+    }
+  }
+
   def toInt(s: String): Int = {
     try {
       s.toInt

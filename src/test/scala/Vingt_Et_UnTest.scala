@@ -19,5 +19,23 @@ class Vingt_Et_UnTest extends AnyFlatSpec{
     assert(Vingt_Et_Un.parse(Vingt_Et_Un.Ace) === 11)
   }
 
+  "isBust" should "return true if the value is 21" in{
+    assert(Vingt_Et_Un.isBust(22) === false)
+    assert(Vingt_Et_Un.isBust(21) === true)
+    assert(Vingt_Et_Un.isBust(10) === false)
+  }
+
+  "optimisticF" should "find the max value of the hand" in {
+    // Arrange
+    val hand: Array[Int] = Array(5, 9, 11, 3)
+    assert(Vingt_Et_Un.optimisticF(hand) === 28)
+  }
+
+  "pessimisticF" should "find the min value of the hand" in {
+    // Arrange
+    val hand: Array[Int] = Array(5, 9, 11, 3)
+    assert(Vingt_Et_Un.pessimisticF(hand) === 18)
+  }
+
 
 }
