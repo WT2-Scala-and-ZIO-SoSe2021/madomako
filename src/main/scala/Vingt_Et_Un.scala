@@ -24,20 +24,20 @@ object Vingt_Et_Un {
 
   def values(card: Int): Array[Int] = {
     card match{
-      case value
-        if(value >=2 && value <=10)
-      => Array(value)
+      case value if(value >=2 && value <=10) => Array(value)
       case 11 => Array(1, 11)
     }
 
   }
 
   def determineHandValue(strategy: Array[Int] => Int)(hand: Array[Int]): Int = {
-    Arrays.sum(hand.map(values).map(strategy))
+    val vals = hand.map(x => values(x))
+    val strategied = vals.map(x => strategy(x))
+    Arrays.sum(strategied)
   }
 
   def isBust(handValue: Int): Boolean = {
-    if (handValue == 21){
+    if (handValue > 21){
       true
     }else{
       false

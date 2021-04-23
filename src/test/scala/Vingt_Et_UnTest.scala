@@ -20,8 +20,8 @@ class Vingt_Et_UnTest extends AnyFlatSpec{
   }
 
   "isBust" should "return true if the value is 21" in{
-    assert(Vingt_Et_Un.isBust(22) === false)
-    assert(Vingt_Et_Un.isBust(21) === true)
+    assert(Vingt_Et_Un.isBust(22) === true)
+    assert(Vingt_Et_Un.isBust(21) === false)
     assert(Vingt_Et_Un.isBust(10) === false)
   }
 
