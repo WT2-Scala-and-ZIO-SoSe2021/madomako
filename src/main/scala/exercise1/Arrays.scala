@@ -1,3 +1,5 @@
+package exercise1
+
 object Arrays {
 
   def max(arr: Array[Int]): Int = {
@@ -13,11 +15,6 @@ object Arrays {
   def sum(arr: Array[Int]): Int = {
     arr.fold(0)(_ + _)
   }
-
-
-
-
-
 
 
 }
