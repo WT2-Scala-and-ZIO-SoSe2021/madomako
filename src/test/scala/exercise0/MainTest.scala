@@ -1,4 +1,4 @@
-package exercise1
+package exercise0
 
 import org.scalatest.flatspec.AnyFlatSpec
 

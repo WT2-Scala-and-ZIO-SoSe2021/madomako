@@ -1,4 +1,4 @@
-package exercise1
+package exercise0
 
 object Main extends App {
   print("Hello World")
