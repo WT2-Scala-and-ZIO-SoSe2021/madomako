@@ -1,3 +1,5 @@
+package exercise1
+
 object Arrays {
 
   def max(arr: Array[Int]): Int = {

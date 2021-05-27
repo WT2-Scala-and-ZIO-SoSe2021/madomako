@@ -1,3 +1,5 @@
+package exercise1
+
 object Vingt_Et_Un {
 
   val Jack = "J"
