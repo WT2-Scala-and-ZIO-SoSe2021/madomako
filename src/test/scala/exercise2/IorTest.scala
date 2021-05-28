@@ -82,5 +82,7 @@ class IorTest extends AnyFlatSpec{
     assert(Ior.both[Int](re, 2).flatMap(x => Ior.both[Int](re2, x*2)) == Ior.both[Int](re2, 4))
   }
 
-  // TODO Unit function test
+  "Unit on value" should "return a Right with elem value" in {
+    assert(Ior.unit[Int](2) == Ior.right(2))
+  }
 }
