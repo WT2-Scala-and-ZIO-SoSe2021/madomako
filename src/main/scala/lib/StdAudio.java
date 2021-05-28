@@ -1,5 +1,4 @@
 package lib;
-
 /******************************************************************************
  *  Compilation:  javac StdAudio.java
  *  Execution:    java StdAudio
@@ -59,7 +58,7 @@ public final class StdAudio {
 
     private static final int BYTES_PER_SAMPLE = 2;       // 16-bit audio
     private static final int BITS_PER_SAMPLE = 16;       // 16-bit audio
-    private static final int MAX_16_BIT = 32768;
+    private static final double MAX_16_BIT = 32768;
     private static final int SAMPLE_BUFFER_SIZE = 4096;
 
     private static final int MONO   = 1;
@@ -129,12 +128,6 @@ public final class StdAudio {
             InputStream is2 = StdAudio.class.getClassLoader().getResourceAsStream(filename);
             if (is2 != null) {
                 return AudioSystem.getAudioInputStream(is2);
-            }
-
-            // from URL (including jar file)
-            URL url = new URL(filename);
-            if (url != null) {
-                return AudioSystem.getAudioInputStream(url);
             }
 
             // give up
