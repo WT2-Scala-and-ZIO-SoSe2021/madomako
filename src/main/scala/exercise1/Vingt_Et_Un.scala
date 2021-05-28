@@ -1,3 +1,5 @@
+package exercise1
+
 object Vingt_Et_Un {
 
   val Jack = "J"
@@ -8,10 +10,10 @@ object Vingt_Et_Un {
 
   def parse(card: String): Int = {
     val cardAsInteger = toInt(card)
-    if(cardAsInteger >= 2 && cardAsInteger <=10 ){
+    if (cardAsInteger >= 2 && cardAsInteger <= 10) {
       cardAsInteger
-    }else{
-      card match{
+    } else {
+      card match {
         case Jack | Queen | King => 10
         case Ace => 11
       }
@@ -23,8 +25,8 @@ object Vingt_Et_Un {
   }
 
   def values(card: Int): Array[Int] = {
-    card match{
-      case value if(value >=2 && value <=10) => Array(value)
+    card match {
+      case value if (value >= 2 && value <= 10) => Array(value)
       case 11 => Array(1, 11)
     }
 
@@ -37,9 +39,9 @@ object Vingt_Et_Un {
   }
 
   def isBust(handValue: Int): Boolean = {
-    if (handValue > 21){
+    if (handValue > 21) {
       true
-    }else{
+    } else {
       false
     }
   }

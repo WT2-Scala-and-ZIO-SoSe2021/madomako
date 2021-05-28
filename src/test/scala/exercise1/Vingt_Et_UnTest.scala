@@ -1,3 +1,5 @@
+package exercise1
+
 import org.scalatest.flatspec.AnyFlatSpec
 
 class Vingt_Et_UnTest extends AnyFlatSpec{
