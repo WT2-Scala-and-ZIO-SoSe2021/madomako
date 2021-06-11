@@ -5,15 +5,18 @@ import exercise3.Temperature.{Locale, TemperatureClass, display}
 object Main {
 
   def main(args: Array[String]): Unit = {
-    implicit val default: Locale.Locale = Locale.US
+    implicit val locale: Locale.Value = Locale.US
 
-    val t1 = 60.455.fahrenheit()
-    val t2 = 5.8.celsius()
+    val c = 0.0
+    println(c.celsius)
 
-    println(display(t1))
-    println(display(t2))
-    println(display(t1 avg t2))
+    val k = 0.0
+    println(k.kelvin)
 
+    val f = 0.0
+    println(f.fahrenheit)
 
+    println(display(c))
+    println(display(c)(Locale.US))
   }
 }
