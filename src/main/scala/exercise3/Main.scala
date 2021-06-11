@@ -5,9 +5,6 @@ class Main {
 
 }
 
-// INFO: 2 TODOs in total
-
-// TODO task 1 E actually says: "Create a ___class___ outside"
 object Main extends App {
   implicit val locale = Locale.SCI
 

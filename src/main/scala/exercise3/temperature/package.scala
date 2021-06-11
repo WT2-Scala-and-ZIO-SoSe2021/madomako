@@ -5,13 +5,12 @@ import exercise3.temperature.Locale.Locale
 package object temperature {
   type Temperature = Double
 
-  // TODO Temperature as type?
   implicit class Celsius(systemValue: Temperature) {
     val freezingPoint = 0
     val absoluteZero = -273.15
 
     def celsius: Temperature = systemValue
-    def kelvin: Temperature = systemValue + 273.15
+    def kelvin: Temperature = systemValue + absoluteZero
     def fahrenheit: Temperature = (systemValue - 32) / (9.0/5.0)
 
     def avg(other: Temperature): Temperature = (systemValue + other) / 2.0
