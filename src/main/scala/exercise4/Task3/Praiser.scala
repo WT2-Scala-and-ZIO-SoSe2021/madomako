@@ -10,7 +10,7 @@ case class Praiser(name: String) extends Robot {
     val action = completedJobsQueue.use( q =>
       for {
         job <- q.take
-        _ <- News.post(s"[posted by $name]: ${job.completedBy.name} did an excellent job")
+        _ <- News.post(s"[posted by $name]: ${job.completedBy.name} did an excellent job!")
       } yield ()
     )
     val repeated = action repeat Schedule.forever
