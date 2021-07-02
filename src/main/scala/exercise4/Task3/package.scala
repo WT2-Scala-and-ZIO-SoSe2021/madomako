@@ -6,7 +6,6 @@ import Task3.News.News
 import zio.{Has, ZIO, clock, console, random}
 
 package object Task3 {
-  // TODO?
   type MyEnv = Has[JobBoard] with Has[CompletedJobsHub] with Has[News] with clock.Clock with console.Console with random.Random
 
   // TODO: ZIO.serviceWith <-> ZIO.accessM

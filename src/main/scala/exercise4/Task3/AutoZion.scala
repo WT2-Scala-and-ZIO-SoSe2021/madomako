@@ -24,9 +24,9 @@ object AutoZion extends zio.App {
         JobBoard.JobBoardLive.layer
           ++ CompletedJobsHub.CompletedJobsHubLive.layer
           ++ News.NewsLive.layer
-          ++ clock.Clock.live // TODO?
-          ++ console.Console.live // TODO?
-          ++ random.Random.live) // TODO?
+          ++ clock.Clock.live
+          ++ console.Console.live
+          ++ random.Random.live)
       .exitCode
   }
 }
